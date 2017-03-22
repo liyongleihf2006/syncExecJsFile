@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>syncExecJsFile</title>
+</head>
+<body>
+<button id="btn">点击能够触发同步加载的js中的事件监听</button>
+<label for="fromPage">来自于页面的:</label><textarea id="fromPage"></textarea>
+<label for="fromJs">来自于动态js的:</label><textarea id="fromJs"></textarea>
+<label for="click">点击按钮了吗?</label><textarea id="click"></textarea>
+<script src="syncExecJsFile.js"></script>
+<script>
+    var fromPage="我是页面中定义的变量,我是在动态加载的js中使用js填充到文本域的";
+    syncExecJsFile("index.js");
+    document.querySelector("#fromJs").value=fromJs;
+</script>
+</body>
+</html>
